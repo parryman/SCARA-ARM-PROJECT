@@ -2,9 +2,9 @@
 
 TEAM MEMBERS:
 
-Chris Parry
-Jon Sorenson
-Tom Clark
+- Chris Parry
+- Jon Sorenson
+- Tom Clark
 
 WEEK 1
 - Complete all equations and tool locations
