@@ -1,0 +1,82 @@
+First lab arranging of team members:
+
+Chris Parry
+Jon Sorenson
+Tom Clark
+
+Revision on Project parameters and resources given.
+** All numbers given are equivalent to the graphics plane axis on Java **
+
+Motor 1 position given 
+xm1 = 290
+ym1 = 372
+
+xm2 = 379
+ym2 = 374
+
+Arm length
+R = 156.0
+
+Joint Positions 
+FORMULAE
+xj1 = xm1 + R.cos(angle.1)
+yj1 = ym1 + R.sin(angle.1)
+
+xj2 = xm2 + R.cos(angle.2)
+yj2 = ym2 + R.sin(angle.2)
+
+Joint position 1(left joint)
+WORKING
+181.63(xj1) =  290 + 156*cos(134)
+484.21(yj1) =  372 + 156*sin(134)
+
+Joint position 2(right joint)
+WORKING
+343.90(xj2) = 379 + 156*cos(103)
+526.00(yj2) = 374 + 156*sin(103)
+
+Find A (center between J1 & J2)
+FORMULAE
+xA = xj1 + 0.5*(xj2 - xj1)
+yA = yj1 + 0.5*(yj2 - yj1)
+
+WORKING
+xA = xj1 + 0.5*(xj2 - xj1)
+yA = yj1 + 0.5*(yj2 - yj1)
+
+Find H (length between A and the Tool 1)
+FORMULAE
+H = SQRT(R^2 -((SQRT((xj1 - xj2)^2 + (yj1 - yj2)^2) / 2))^2)
+
+WORKING
+(H) = SQRT(156^2 - ((SQRT((181.63 - 343.90)^2 + (484.21 - 526.00)^2) / 2))^2)
+ = SQRT(156^2 - ((SQRT((-162.27)^2 + (-41.79)^2) / 2))^2)
+ = SQRT(156^2 - ((SQRT(27979.2529 + 1746.4041) / 2))^2)
+  = SQRT(156^2 - ((SQRT(29725.657) / 2))^2)
+    = SQRT(156^2 - ((172.4113018 / 2))^2)
+      = SQRT(156^2 - (86.20565092)^2)
+       = SQRT(156^2 - (7431.41425)
+        = SQRT(24336 - (7431.41425)
+         = SQRT(16904.58575)
+H = 130.02
+
+T1 Alpha
+Alpha = atan (yj1-yj2)/(xj2-xj1)
+
+T2 Alpha
+
+
+Tool Position
+FORMULAE
+xT1 = xA + H*cos(Pi/2-alpha) 
+yT1 = yA + H*sin(Pi/2-alpha) 
+
+WORKING
+xT1 = xA + H*cos(Pi/2-alpha) 
+yT1 = yA + H*sin(Pi/2-alpha)
+
+
+COMBINED WORK OF:
+Jon Sorenson
+Chris Parry
+Tom Clark
